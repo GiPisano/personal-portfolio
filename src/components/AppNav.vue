@@ -47,4 +47,12 @@
 .active {
   background-color: rgb(61, 61, 61);
 }
+
+@media screen and (max-width: 600px) {
+  .nav {
+    top: 0;
+    bottom: auto;
+    transform: translate(-50%, 0%);
+  }
+}
 </style>
