@@ -1,5 +1,20 @@
 @import "bootstrap/scss/bootstrap";
 
+:root {
+  --red: #e44e58;
+  --blue: #0077b5;
+  --gray: rgb(170, 170, 170);
+  --text-color: #fff;
+  --lighter-text: rgb(219, 219, 219);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    overflow: visible; /* Show scrollbars */
-  }
+  overflow: visible;
+  font-family: "Montserrat", sans-serif;
+}
