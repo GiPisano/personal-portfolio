@@ -14,6 +14,12 @@
       :class="{ active: $route.name === 'about' }"
       >About</router-link
     >
+    <router-link
+      :to="{ name: 'projects' }"
+      class="nav-link"
+      :class="{ active: $route.name === 'projects' }"
+      >Projects</router-link
+    >
   </div>
 </template>
 
