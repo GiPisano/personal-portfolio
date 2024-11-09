@@ -9,12 +9,6 @@
       >Home</router-link
     >
     <router-link
-      :to="{ name: 'about' }"
-      class="nav-link"
-      :class="{ active: $route.name === 'about' }"
-      >About</router-link
-    >
-    <router-link
       :to="{ name: 'projects' }"
       class="nav-link"
       :class="{ active: $route.name === 'projects' }"
@@ -54,11 +48,11 @@
   background-color: rgb(61, 61, 61);
 }
 
-@media screen and (max-width: 600px) {
-  .nav {
-    top: 0;
-    bottom: auto;
-    transform: translate(-50%, 0%);
-  }
-}
+// @media screen and (max-width: 600px) {
+//   .nav {
+//     top: 0;
+//     bottom: auto;
+//     transform: translate(-50%, 0%);
+//   }
+// }
 </style>
