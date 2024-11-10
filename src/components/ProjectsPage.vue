@@ -40,7 +40,7 @@ export default {
 <template>
   <h1 class="text-center">My Projects</h1>
   <div class="container">
-    <div class="row">
+    <div class="row g-4">
       <div v-for="project in Projects" :key="project.id" class="col-4">
         <div class="card">
           <div class="card-header">
