@@ -1,74 +1,57 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      Projects: [
+        {
+          id: 1,
+          title: "Campo Minato",
+          imgSrc: "/src/assets/campoMinato.png",
+          demoLink: "https://gipisano.github.io/js-campominato-grid/",
+          codeLink: "https://github.com/GiPisano/js-campominato-grid",
+        },
+        {
+          id: 2,
+          title: "Proj HTML VueJS",
+          imgSrc: "/src/assets/proj-html-vuejs.png",
+          demoLink: "https://gipisano.github.io/proj-html-vuejs/",
+          codeLink: "https://github.com/GiPisano/proj-html-vuejs",
+        },
+        {
+          id: 3,
+          title: "Vue Slider",
+          imgSrc: "/src/assets/vue-slider.png",
+          demoLink: "https://gipisano.github.io/vue-slider/",
+          codeLink: "https://github.com/GiPisano/vue-slider",
+        },
+        {
+          id: 4,
+          title: "Travel App",
+          imgSrc: "/src/assets/travel-app.png",
+          demoLink: "https://your-travel-diary.netlify.app/",
+          codeLink: "https://github.com/GiPisano/travel-app",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <template>
   <h1 class="text-center">My Projects</h1>
   <div class="container">
     <div class="row">
-      <!-- campoMinato -->
-      <div class="col-4">
+      <div v-for="project in Projects" :key="project.id" class="col-4">
         <div class="card">
           <div class="card-header">
-            <img src="/src/assets/campoMinato.png" alt="" />
+            <img :src="project.imgSrc" :alt="project.title" />
           </div>
           <div class="card-body">
             <button class="btn btn-warning">
-              <a
-                href="https://gipisano.github.io/js-campominato-grid/"
-                target="_blank"
-                >Demo</a
-              >
+              <a :href="project.demoLink" target="_blank">Demo</a>
             </button>
             <button class="btn btn-warning">
-              <a
-                href="https://github.com/GiPisano/js-campominato-grid"
-                target="_blank"
-                >Code</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- proj-html-vuejs -->
-      <div class="col-4">
-        <div class="card">
-          <div class="card-header">
-            <img src="/src/assets/proj-html-vuejs.png" alt="" />
-          </div>
-          <div class="card-body">
-            <button class="btn btn-warning">
-              <a
-                href="https://gipisano.github.io/proj-html-vuejs/"
-                target="_blank"
-                >Demo</a
-              >
-            </button>
-            <button class="btn btn-warning">
-              <a
-                href="https://github.com/GiPisano/proj-html-vuejs"
-                target="_blank"
-                >Code</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4">
-        <div class="card">
-          <div class="card-header">
-            <img src="/src/assets/vue-slider.png" alt="" />
-          </div>
-          <div class="card-body">
-            <button class="btn btn-warning">
-              <a href="https://gipisano.github.io/vue-slider/" target="_blank"
-                >Demo</a
-              >
-            </button>
-            <button class="btn btn-warning">
-              <a href="https://github.com/GiPisano/vue-slider" target="_blank"
-                >Code</a
-              >
+              <a :href="project.codeLink" target="_blank">Code</a>
             </button>
           </div>
         </div>
