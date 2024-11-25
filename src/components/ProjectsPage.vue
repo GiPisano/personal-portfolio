@@ -41,7 +41,7 @@ export default {
   <h1 class="text-center">My Projects</h1>
   <div class="container">
     <div class="row g-4">
-      <div v-for="project in Projects" :key="project.id" class="col-4">
+      <div v-for="project in Projects" :key="project.id" class="col-md-4">
         <div class="card">
           <div class="card-header">
             <img :src="project.imgSrc" :alt="project.title" />

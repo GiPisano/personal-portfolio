@@ -20,4 +20,8 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss";
+body {
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
 </style>
