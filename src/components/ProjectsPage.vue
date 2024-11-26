@@ -93,6 +93,27 @@ export default {
           demoLink: "https://gipisano.github.io/html-css-spotifyweb/",
           codeLink: "https://github.com/GiPisano/html-css-spotifyweb",
         },
+        {
+          id: 10,
+          category: "frontend",
+          technologies: ["HTML", "CSS"],
+          responsive: true,
+          title: "wannabe",
+          imgSrc: "/src/assets/wannabe.png",
+          demoLink: "https://gipisano.github.io/html-css-resp-wannabe/",
+          codeLink: "https://github.com/GiPisano/html-css-resp-wannabe",
+        },
+        {
+          id: 9,
+          category: "frontend",
+          technologies: ["HTML", "CSS", "bootstrap"],
+          responsive: true,
+          title: "freelancer",
+          imgSrc: "/src/assets/freelancer.png",
+          demoLink: "https://gipisano.github.io/html-css-bootstrap-freelancer/",
+          codeLink: "https://github.com/GiPisano/html-css-bootstrap-freelancer",
+        },
+        //
       ],
     };
   },
