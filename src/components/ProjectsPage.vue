@@ -6,6 +6,8 @@ export default {
         {
           id: 1,
           title: "Campo Minato",
+          category: "frontend",
+          technologies: ["HTML", "CSS", "javascript"],
           imgSrc: "/src/assets/campoMinato.png",
           demoLink: "https://gipisano.github.io/js-campominato-grid/",
           codeLink: "https://github.com/GiPisano/js-campominato-grid",
@@ -13,6 +15,8 @@ export default {
         {
           id: 2,
           title: "Proj HTML VueJS",
+          category: "frontend",
+          technologies: ["HTML", "CSS", "vue.js", "bootstrap"],
           imgSrc: "/src/assets/proj-html-vuejs.png",
           demoLink: "https://gipisano.github.io/proj-html-vuejs/",
           codeLink: "https://github.com/GiPisano/proj-html-vuejs",
@@ -20,6 +24,8 @@ export default {
         {
           id: 3,
           title: "Vue Slider",
+          category: "frontend",
+          technologies: ["html", "CSS", "vue.js"],
           imgSrc: "/src/assets/vue-slider.png",
           demoLink: "https://gipisano.github.io/vue-slider/",
           codeLink: "https://github.com/GiPisano/vue-slider",
@@ -27,9 +33,29 @@ export default {
         {
           id: 4,
           title: "Travel App",
+          category: "frontend",
+          technologies: ["HTML", "CSS", "vue.js", "bootstrap"],
           imgSrc: "/src/assets/travel-app.png",
           demoLink: "https://your-travel-diary.netlify.app/",
           codeLink: "https://github.com/GiPisano/travel-app",
+        },
+        {
+          id: 5,
+          category: "frontend",
+          technologies: ["HTML", "CSS"],
+          title: "boolando",
+          imgSrc: "/src/assets/boolando.png",
+          demoLink: "https://gipisano.github.io/html-css-boolando/",
+          codeLink: "https://github.com/GiPisano/html-css-boolando",
+        },
+        {
+          id: 6,
+          category: "frontend",
+          technologies: ["HTML", "CSS"],
+          title: "Discord",
+          imgSrc: "/src/assets/discord.png",
+          demoLink: "https://gipisano.github.io/htmlcss-discord/",
+          codeLink: "https://github.com/GiPisano/htmlcss-discord",
         },
       ],
     };
