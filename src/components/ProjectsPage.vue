@@ -143,6 +143,16 @@ export default {
           demoLink: "https://gipisano.github.io/vue-todolist/",
           codeLink: "https://github.com/GiPisano/vue-todolist",
         },
+        {
+          id: 12,
+          category: "frontend",
+          technologies: ["HTML", "CSS", "javascript", "vue.js", "axios"],
+          responsive: true,
+          title: "Vue Email List",
+          imgSrc: "/src/assets/vue-email-list.png",
+          demoLink: "https://gipisano.github.io/vue-email-list/",
+          codeLink: "https://github.com/GiPisano/vue-email-list",
+        },
       ],
     };
   },
