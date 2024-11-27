@@ -144,7 +144,7 @@ export default {
           codeLink: "https://github.com/GiPisano/vue-todolist",
         },
         {
-          id: 12,
+          id: 13,
           category: "frontend",
           technologies: ["HTML", "CSS", "javascript", "vue.js", "axios"],
           responsive: true,
