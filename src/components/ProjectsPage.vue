@@ -123,6 +123,16 @@ export default {
           demoLink: "https://gipisano.github.io/js-biglietto-treno-form/",
           codeLink: "https://github.com/GiPisano/js-biglietto-treno-form",
         },
+        {
+          id: 11,
+          category: "frontend",
+          technologies: ["HTML", "CSS", "javascript"],
+          responsive: false,
+          title: "Boolzapp",
+          imgSrc: "/src/assets/vue-boolzapp.png",
+          demoLink: "https://gipisano.github.io/vue-boolzapp/",
+          codeLink: "https://github.com/GiPisano/vue-boolzapp",
+        },
       ],
     };
   },
