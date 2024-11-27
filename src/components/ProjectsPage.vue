@@ -113,7 +113,16 @@ export default {
           demoLink: "https://gipisano.github.io/html-css-bootstrap-freelancer/",
           codeLink: "https://github.com/GiPisano/html-css-bootstrap-freelancer",
         },
-        //
+        {
+          id: 10,
+          category: "frontend",
+          technologies: ["HTML", "CSS", "bootstrap", "javascript"],
+          responsive: true,
+          title: "biglietto treno form",
+          imgSrc: "/src/assets/biglietto-treno-form.png",
+          demoLink: "https://gipisano.github.io/js-biglietto-treno-form/",
+          codeLink: "https://github.com/GiPisano/js-biglietto-treno-form",
+        },
       ],
     };
   },
