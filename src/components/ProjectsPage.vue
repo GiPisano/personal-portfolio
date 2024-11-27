@@ -133,6 +133,16 @@ export default {
           demoLink: "https://gipisano.github.io/vue-boolzapp/",
           codeLink: "https://github.com/GiPisano/vue-boolzapp",
         },
+        {
+          id: 12,
+          category: "frontend",
+          technologies: ["HTML", "CSS", "javascript"],
+          responsive: true,
+          title: "todolist",
+          imgSrc: "/src/assets/todolist.png",
+          demoLink: "https://gipisano.github.io/vue-todolist/",
+          codeLink: "https://github.com/GiPisano/vue-todolist",
+        },
       ],
     };
   },
