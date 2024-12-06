@@ -170,6 +170,23 @@ export default {
           demoLink: "https://vite-boolando-eta.vercel.app/",
           codeLink: "https://github.com/GiPisano/vite-boolando",
         },
+        {
+          id: 15,
+          category: "frontend",
+          technologies: [
+            "HTML",
+            "CSS",
+            "javascript",
+            "vue.js",
+            "axios",
+            "postman",
+          ],
+          responsive: true,
+          title: "boolflix",
+          imgSrc: "/src/assets/boolflix.png",
+          demoLink: "https://boolflix-brown.vercel.app/",
+          codeLink: "https://github.com/GiPisano/clone-netflix",
+        },
       ],
     };
   },
