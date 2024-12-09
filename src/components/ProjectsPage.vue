@@ -188,6 +188,21 @@ export default {
           codeLink: "https://github.com/GiPisano/clone-netflix",
         },
       ],
+
+      types: [
+        "HTML",
+        "CSS",
+        "SCSS",
+        "BOOTSTRAP",
+        "JAVASCRIPT",
+        "VUE.JS",
+        "AXIOS",
+        "DATABASE",
+        "MYSQL",
+        "PHP",
+        "POSTMAN",
+        "LARAVEL",
+      ],
     };
   },
 };
@@ -196,6 +211,12 @@ export default {
 <template>
   <h1 class="text-center">My Projects</h1>
   <div class="container">
+    <section class="filters">
+      <div v-for="type in types">
+        <button class="btn btn-primary">{{ type }}</button>
+      </div>
+    </section>
+
     <div class="row g-4">
       <div v-for="project in Projects" :key="project.id" class="col-md-4">
         <div class="card">
@@ -225,5 +246,11 @@ img {
 .card-body {
   display: flex;
   justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 </style>
