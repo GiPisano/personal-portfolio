@@ -203,7 +203,33 @@ export default {
         "POSTMAN",
         "LARAVEL",
       ],
+      selectedFilters: [],
     };
+  },
+  computed: {
+    filteredProjects() {
+      if (this.selectedFilters.length === 0) {
+        return this.Projects; // Mostra tutti i progetti se non ci sono filtri
+      }
+      return this.Projects.filter((project) =>
+        this.selectedFilters.every((filter) =>
+          project.technologies
+            .map((tech) => tech.toUpperCase())
+            .includes(filter)
+        )
+      );
+    },
+  },
+  methods: {
+    toggleFilter(filter) {
+      if (this.selectedFilters.includes(filter)) {
+        this.selectedFilters = this.selectedFilters.filter(
+          (selected) => selected !== filter
+        );
+      } else {
+        this.selectedFilters.push(filter);
+      }
+    },
   },
 };
 </script>
@@ -211,25 +237,53 @@ export default {
 <template>
   <h1 class="text-center">My Projects</h1>
   <div class="container">
+    <!-- Sezione dei filtri -->
     <section class="filters">
-      <div v-for="type in types">
-        <button class="btn btn-primary">{{ type }}</button>
+      <div v-for="type in types" :key="type">
+        <button
+          class="btn"
+          :class="
+            selectedFilters.includes(type) ? 'btn-success' : 'btn-primary'
+          "
+          @click="toggleFilter(type)"
+        >
+          {{ type }}
+        </button>
       </div>
     </section>
 
+    <!-- Sezione dei progetti -->
     <div class="row g-4">
-      <div v-for="project in Projects" :key="project.id" class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <img :src="project.imgSrc" :alt="project.title" />
-          </div>
-          <div class="card-body">
-            <button class="btn btn-warning">
-              <a :href="project.demoLink" target="_blank">Demo</a>
-            </button>
-            <button class="btn btn-warning">
-              <a :href="project.codeLink" target="_blank">Code</a>
-            </button>
+      <div
+        v-for="project in filteredProjects"
+        :key="project.id"
+        class="col-md-4"
+      >
+        <!-- Card -->
+        <div class="card position-relative h-100">
+          <!-- Immagine della card -->
+          <img :src="project.imgSrc" :alt="project.title" />
+
+          <!-- Overlay nascosto che appare al hover -->
+          <div class="card-overlay">
+            <h5>{{ project.title }}</h5>
+            <p><strong>Category:</strong> {{ project.category }}</p>
+            <p>
+              <strong>Technologies:</strong>
+              {{ project.technologies.join(", ") }}
+            </p>
+            <p>
+              <strong>Responsive:</strong>
+              {{ project.responsive ? "Yes" : "No" }}
+            </p>
+            <div class="btn-cards">
+              <button class="btn btn-warning">
+                <a :href="project.demoLink" target="_blank">Demo</a>
+              </button>
+              <button class="btn btn-warning">
+                <a :href="project.codeLink" target="_blank">Code</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -238,19 +292,80 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.filters {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* Immagine */
 img {
   width: 100%;
+  height: auto;
+}
+
+/* Overlay */
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Effetto zoom */
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo semitrasparente */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
 }
 
-.card-body {
-  display: flex;
-  justify-content: space-between;
+.card:hover .card-overlay {
+  opacity: 1; /* Mostra l'overlay al hover */
 }
 
-.filters {
+.card-overlay h5 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card-overlay p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.card-overlay strong {
+  font-weight: bold;
+}
+
+/* Pulsanti */
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
+
+.btn-cards {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  gap: 10px;
 }
 </style>
